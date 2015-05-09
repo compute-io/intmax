@@ -17,18 +17,68 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'compute-intmax' );
+var intmax = require( 'compute-intmax' );
 ```
 
-#### foo( arr )
+#### intmax( [type] )
 
-What does this function do?
+Returns the maximum value of a specified `integer` type.
+
+``` javascript
+var max = intmax( 'int8' );
+// returns 127
+```
+
+The following `integer` types are supported:
+
+* 	__int8__: signed 8-bit integer
+*	__uint8__: unsigned 8-bit integer
+*	__int16__: signed 16-bit integer
+*	__uint16__: unsigned 16-bit integer
+*	__int32__: signed 32-bit integer
+*	__uint32__: unsigned 32-bit integer
+
+If not provided an integer `type`, the function returns the maximum signed 32-bit integer.
+
+``` javascript
+intmax() === intmax( 'int32' );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-intmax' );
+var intmax = require( 'compute-intmax' ),
+	max;
+
+// int32 (default):
+max = intmax();
+// returns 2147483647
+
+// int8:
+max = intmax( 'int8' );
+// returns 127
+
+// int16:
+max = intmax( 'int16' );
+// returns 32767
+
+// int32:
+max = intmax( 'int32' );
+// returns 2147483647
+
+// uint8:
+max = intmax( 'uint8' );
+// returns 255
+
+// uint16:
+max = intmax( 'uint16' );
+// returns 65535
+
+// uint32:
+max = intmax( 'uint32' );
+// returns 4294967295
 ```
 
 To run the example code from the top-level application directory,

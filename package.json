@@ -25,12 +25,34 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "max",
+    "maximum",
+    "integer",
+    "int",
+    "int8",
+    "int16",
+    "int32",
+    "uint8",
+    "uint16",
+    "uint32",
+    "const",
+    "constant",
+    "util",
+    "utility"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/intmax/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "compute-const-max-int16": "^1.0.0",
+    "compute-const-max-int32": "^1.0.0",
+    "compute-const-max-int8": "^1.0.0",
+    "compute-const-max-uint16": "^1.0.0",
+    "compute-const-max-uint32": "^1.0.0",
+    "compute-const-max-uint8": "^1.0.0",
+    "validate.io-string-primitive": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",
